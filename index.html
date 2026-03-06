@@ -1,0 +1,268 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finnair Climbing Club</title>
+  <meta name="description" content="Finnair Climbing Club is a community for everyone interested in climbing. Join us to climb, learn, and have fun together." />
+  <style>
+    :root{
+      --blue:#0a2b7b;
+      --blue2:#0c3aa6;
+      --bg:#f6f8fc;
+      --text:#0b1220;
+      --muted:#4b5565;
+      --card:#ffffff;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(10,43,123,.12);
+      --max:1080px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg, #ffffff 0%, var(--bg) 65%, #ffffff 100%);
+    }
+    a{color:var(--blue2); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      position:sticky;
+      top:0;
+      background:rgba(255,255,255,.85);
+      backdrop-filter:saturate(160%) blur(10px);
+      border-bottom:1px solid rgba(10,43,123,.08);
+      z-index:10;
+    }
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:220px;
+    }
+    .brand img{width:44px; height:44px; object-fit:contain}
+    .brand strong{letter-spacing:.3px}
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:14px;
+      padding:0;
+      margin:0;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    nav a{
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:999px;
+      color:var(--text);
+    }
+    nav a:hover{background:rgba(10,43,123,.08); text-decoration:none}
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 50px}
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:22px;
+      align-items:center;
+      padding:26px;
+      background: radial-gradient(1200px 600px at 20% 20%, rgba(12,58,166,.16), transparent 60%),
+                  radial-gradient(900px 450px at 85% 40%, rgba(10,43,123,.10), transparent 55%),
+                  #ffffff;
+      border:1px solid rgba(10,43,123,.10);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero h1{margin:0 0 10px; font-size:clamp(26px, 3.4vw, 44px)}
+    .hero p{margin:0 0 16px; color:var(--muted); font-size:18px; line-height:1.5}
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:10px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid rgba(10,43,123,.18);
+      background:#fff;
+      color:var(--blue);
+      font-weight:650;
+      box-shadow:0 6px 16px rgba(10,43,123,.10);
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, var(--blue) 0%, var(--blue2) 100%);
+      color:#fff;
+      border-color:transparent;
+    }
+    .btn:hover{text-decoration:none; transform:translateY(-1px)}
+
+    .logoCard{
+      padding:14px;
+      background:rgba(255,255,255,.75);
+      border:1px solid rgba(10,43,123,.10);
+      border-radius:16px;
+    }
+    .logoCard img{width:100%; height:auto; display:block}
+    .note{font-size:13px; color:var(--muted); margin-top:10px}
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:16px;
+      margin-top:18px;
+    }
+    .card{
+      grid-column: span 6;
+      background:var(--card);
+      border:1px solid rgba(10,43,123,.10);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 10px 24px rgba(10,43,123,.08);
+    }
+    .card h2{margin:0 0 10px; font-size:20px}
+    .card p{margin:0; color:var(--muted); line-height:1.55}
+    .list{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .list li{margin:6px 0}
+
+    footer{
+      margin-top:28px;
+      padding:20px 0 0;
+      color:var(--muted);
+      font-size:13px;
+      border-top:1px solid rgba(10,43,123,.10);
+    }
+
+    @media (max-width: 860px){
+      .hero{grid-template-columns: 1fr; padding:20px}
+      .card{grid-column: span 12}
+      .brand{min-width:auto}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <img src="logo.png" alt="Finnair Climbing Club logo" />
+        <div>
+          <strong>Finnair Climbing Club</strong><br />
+          <span style="color:var(--muted); font-size:13px">Climb, learn, and have fun together</span>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#join">Join</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>A climbing club for everyone, regardless of experience</h1>
+        <p>
+          Finnair Climbing Club is a low threshold community where you can climb with colleagues.
+          We focus on the joy of movement, learning together, and safe practice.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="https://forms.office.com/e/G49UwnKsBd" target="_blank" rel="noreferrer">Join the club</a>
+          <a class="btn" href="#activities">See activities</a>
+        </div>
+        <div class="note">Tip: save this file as <strong>index.html</strong> and place <strong>logo.png</strong> in the same folder.</div>
+      </div>
+      <div class="logoCard">
+        <img src="logo.png" alt="Finnair Climbing Club large logo" />
+          </section>
+
+    <section class="grid" id="about">
+      <article class="card">
+        <h2>About the club</h2>
+        <p>
+          The club welcomes beginners and experienced climbers alike. The goal is not performance.
+          The goal is to enjoy climbing, build skills, and connect with colleagues in a relaxed and supportive atmosphere.
+        </p>
+      </article>
+      <article class="card">
+        <h2>What we do</h2>
+        <p>We climb indoors and outdoors, share tips, and learn together with a strong focus on safety.</p>
+        <ul class="list">
+          <li>Indoor sessions and occasional outdoor trips</li>
+          <li>Basics and safe belaying practices</li>
+          <li>Technique tips and training ideas</li>
+          <li>Friendly vibe, no pressure</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid" id="activities">
+      <article class="card">
+        <h2>Principles</h2>
+        <p>
+          We aim to provide an easy way to enjoy climbing, improve personal skills, and practice safely.
+          More experienced climbers are happy to share tips, and newcomers can easily feel part of the group.
+        </p>
+      </article>
+      <article class="card">
+        <h2>Communication and next steps</h2>
+        <p>
+          After you join, you will receive information about upcoming events and practical details.
+          You can also share your wishes for the club when signing up.
+        </p>
+      </article>
+    </section>
+
+    <section class="grid" id="join">
+      <article class="card">
+        <h2>Join</h2>
+        <p>
+          You can join by filling in the membership form. The link opens in a new tab.
+        </p>
+        <div class="cta" style="margin-top:12px">
+          <a class="btn primary" href="https://forms.office.com/e/G49UwnKsBd" target="_blank" rel="noreferrer">Open the membership form</a>
+        </div>
+      </article>
+      <article class="card" id="contact">
+        <h2>Contact</h2>
+        <p>
+          Questions and ideas: reach out to the club leads.
+        </p>
+        <ul class="list">
+          <li>Olli Luukonlahti</li>
+          <li>Koji Moriwaki</li>
+        </ul>
+        <p class="note">If you want, I can add direct email links and update the wording to match your preferred tone.</p>
+      </article>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Finnair Climbing Club</div>
+      <div style="margin-top:6px">This is a starter page. Next additions could include an events calendar, a FAQ section, and a photo gallery.</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
